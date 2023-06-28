@@ -44,6 +44,63 @@
                 </label>
             </li>
             <li>
+                <label for="pays_origine">Pays d'origine</label>
+                <select name="pays_origine" id="pays_origine">
+                    <option value="">-- Sélectionner un pays --</option>
+                    <optgroup label="Europe">
+                        <option value="fr">France</option>
+                        <option value="it">Italie</option>
+                        <option value="ch">Suisse</option>
+                    </optgroup>
+                </select>
+            </li>
+            <li>
+                <fieldset>
+                    <legend>Sélectionner une destination</legend>
+                    <div>
+                        <label for="usa">
+                            <input type="radio" id="usa" name="destination" value="us">
+                            <span>USA</span>
+                        </label>
+                    </div>
+                    <div>
+                        <label for="japon">
+                            <input type="radio" id="japon" name="destination" value="jp">
+                            <span>Japon</span>
+                        </label>
+                    </div>
+                    <div>
+                        <label for="australie">
+                            <input type="radio" id="australie" name="destination" value="au">
+                            <span>Australie</span>
+                        </label>
+                    </div>
+                </fieldset>
+            </li>
+            <li>
+                <fieldset>
+                    <legend>Moyens de transports favoris</legend>
+                    <div>
+                        <label for="avion">
+                            <input type="checkbox" id="avion" name="transport[]" value="avion">
+                            <span>Avion</span>
+                        </label>
+                    </div>
+                    <div>
+                        <label for="bus">
+                            <input type="checkbox" id="bus" name="transport[]" value="bus">
+                            <span>Bus</span>
+                        </label>
+                    </div>
+                    <div>
+                        <label for="train">
+                            <input type="checkbox" id="train" name="transport[]" value="train">
+                            <span>Train</span>
+                        </label>
+                    </div>
+                </fieldset>
+            </li>
+            <li>
                 <button type="submit">S'inscrire</button>
                 <!-- <input type="reset"> -->
             </li>
