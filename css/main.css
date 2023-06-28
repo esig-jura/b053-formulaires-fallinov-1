@@ -58,6 +58,15 @@ ul.form li {
     margin-bottom: 1.5em;
 }
 
+ul.form li.p50 {
+    display: inline-block;
+    width: 49%;
+}
+
+ul.form li.p50 + li.p50 {
+    margin-left: 2%;
+}
+
 label {
     display: block;
     margin-bottom: .15em;
@@ -83,4 +92,15 @@ form select {
 form [type="checkbox"],
 form [type="radio"] {
     width: auto;
+}
+
+form fieldset label {
+    padding: .6em 0;
+}
+
+textarea {
+    min-width: 100%;
+    max-width: 100%;
+    resize: vertical;
+    min-height: 5em;
 }
