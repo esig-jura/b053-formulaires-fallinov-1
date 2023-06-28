@@ -8,32 +8,69 @@
 </head>
 <body>
 <h1>Formulaire d'inscription</h1>
-<form action="https://kode.ch/getpost" method="get">
+<form action="" method="get">
     <ul class="form">
         <li class="p50">
             <label for="article">Article</label>
             <input type="text" id="article" name="article" autofocus>
+            <div class="error">Saisir un nom d'article !</div>
         </li><li class="p50">
-            <button type="button">Ajouter</button>
+            <button type="submit">Ajouter</button>
         </li>
     </ul>
 </form>
+
+<h2>Mes articles</h2>
+<ul id="mes-articles"></ul>
 
 <!-- JAVASCRIPT -->
 <script>
     /**
      * Fonction qui ajoute un article à la liste
      */
-    function ajouter () {
-        alert(txtArticle.value);
+    function ajouter (event) {
+        // Annule le comportement natif de l'événement
+        event.preventDefault();
+        let divError = txtArticle.nextElementSibling;
+        divError.style.display = 'none';
+
+        // Test si l'utilisateur en saisi un article
+        if(txtArticle.value === "") {
+            // Récupère l'élément HTML qui suit txtArticle et l'affiche
+            divError.style.display = 'block';
+            // Redonne le focus à l'input
+            txtArticle.focus();
+            // Sort de la fonction
+            return;
+        }
+
+        let newLi = "<li>" + txtArticle.value + "</li>";
+        // Ajoute le <li> à la fin de la <ul>
+        ulMesArticles.innerHTML += newLi;
+        // Efface le contenu de l'input
+        txtArticle.value = "";
+        // Redonne le focus à l'input
+        txtArticle.focus();
     }
 
-    // Récupération du premier button du document HTML
-    let btAjouter = document.querySelector('form button');
+    // Récupération du premier formulaire du document HTML
+    let formArticle = document.querySelector('form');
     // Récupération du premier input du document HTML
     let txtArticle = document.querySelector('#article');
-    // écoute l'événement click du bouton Ajouter
-    btAjouter.addEventListener('click', ajouter )
+    // Récupération de la liste des articles du document HTML
+    let ulMesArticles = document.querySelector('#mes-articles');
+
+    // écoute l'événement submit du formulaire
+    formArticle.addEventListener('submit', ajouter );
+    // écoute les double clicks sur la liste
+    ulMesArticles.addEventListener('dblclick', function supprimer (event) {
+        // Récupère l'élément double cliqué
+        let cible = event.target;
+        // Test si la cible est un <li>
+        if(cible.nodeName === "LI") {
+            cible.remove();
+        }
+    });
 </script>
 </body>
 </html>
