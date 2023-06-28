@@ -14,13 +14,36 @@ h1 {
     text-align: center;
 }
 
-button {
-    cursor: pointer;
+/****** Formulaires *******/
+input,
+button,
+textarea,
+select {
+    font-family: inherit;
+    font-weight: inherit;
+    font-size: inherit;
+    color: inherit;
 }
 
-/****** Formulaires *******/
+button {
+    cursor: pointer;
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    padding: 1em 2em;
+    font-weight: bold;
+    transition: all .4s ease;
+}
+
+button:hover {
+    background-color: #2ecc71 ;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, .3);
+}
+
 form {
-    padding: 10px 2.5%;
+    border: 2px solid #2c3e50;
+    background-color: white;
+    padding: 2rem 2.5% 0;
     max-width: 450px;
     margin: 20px auto;
 }
@@ -32,7 +55,7 @@ ul.form {
 }
 
 ul.form li {
-    margin-bottom: 1.75em;
+    margin-bottom: 1.5em;
 }
 
 label {
