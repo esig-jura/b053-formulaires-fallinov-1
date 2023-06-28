@@ -19,6 +19,12 @@ button {
 }
 
 /****** Formulaires *******/
+form {
+    padding: 10px 2.5%;
+    max-width: 450px;
+    margin: 20px auto;
+}
+
 ul.form {
     list-style-type: none;
     padding: 0;
