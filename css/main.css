@@ -68,3 +68,15 @@ label {
 label span {
     font-weight: normal;
 }
+
+form input,
+form textarea,
+form select {
+    width: 100%;
+    padding: .6em;
+}
+
+form [type="checkbox"],
+form [type="radio"] {
+    width: auto;
+}
