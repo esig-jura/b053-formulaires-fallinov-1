@@ -35,3 +35,7 @@ label {
     cursor: pointer;
     font-weight: bold;
 }
+
+label span {
+    font-weight: normal;
+}
