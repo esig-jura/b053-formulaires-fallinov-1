@@ -1,0 +1,86 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: helvetica, sans-serif;
+    font-weight: normal;
+    font-size: 1em;
+    background-color: white;
+    color: #333333;
+}
+
+form {
+    background-color: #f4f4f4;
+    padding: 2.5%;
+    max-width: 450px;
+    margin: 0 auto;
+}
+
+/* Récupère la police, la taille et couleur du texte du parent (inherit) */
+input,
+button,
+textarea,
+select {
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+}
+
+button {
+    cursor: pointer;
+    color: white;
+    background-color: #599a68;
+    border: none;
+    padding: 1em 2em;
+    transition: box-shadow .3s ease;
+}
+
+button:hover {
+    box-shadow: 0 8px 16px rgba(0,0,0,.3);
+}
+
+form > ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+form > ul > li {
+    margin-bottom: 1em;
+}
+
+form input,
+form select,
+form textarea {
+    width: 100%;
+    padding: .5em;
+}
+
+form label {
+    display: block;
+    margin-bottom: .2em;
+    cursor: pointer;
+}
+
+form [type="checkbox"],
+form [type="radio"] {
+    cursor: pointer;
+    width: auto;
+}
+
+form [type="checkbox"] + label,
+form [type="radio"] + label {
+    display: inline-block;
+    padding: .15em 0;
+}
+
+form textarea {
+    max-width: 100%;
+    min-width: 100%;
+    resize: vertical;
+}
+
+
+
+
+
