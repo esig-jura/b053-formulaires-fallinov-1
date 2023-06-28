@@ -14,9 +14,26 @@
             <label for="article">Article</label>
             <input type="text" id="article" name="article" autofocus>
         </li><li class="p50">
-            <button type="submit">S'inscrire</button>
+            <button type="button">Ajouter</button>
         </li>
     </ul>
 </form>
+
+<!-- JAVASCRIPT -->
+<script>
+    /**
+     * Fonction qui ajoute un article à la liste
+     */
+    function ajouter () {
+        alert(txtArticle.value);
+    }
+
+    // Récupération du premier button du document HTML
+    let btAjouter = document.querySelector('form button');
+    // Récupération du premier input du document HTML
+    let txtArticle = document.querySelector('#article');
+    // écoute l'événement click du bouton Ajouter
+    btAjouter.addEventListener('click', ajouter )
+</script>
 </body>
 </html>
